@@ -4,6 +4,9 @@ public class Employee {
     private final String name;
     private double salary;
     private LocalDate hireDay;
+    private static int nextId = 1;
+    private int id;
+    
     // constructor
     public Employee(String n, double s, int year, int month, int day)
     {
@@ -34,10 +37,14 @@ public class Employee {
     
     private boolean equals(Employee other)
     {
-    return name.equals(other.name);
+        return name.equals(other.name);
     }
     
-    
+    public void setId()
+    {
+        id = nextId;
+        nextId++;
+    }
     
 
 }
