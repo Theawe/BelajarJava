@@ -1,7 +1,7 @@
 import java.time.*;
 public class Employee {
     // instance fields
-    private String name;
+    private final String name;
     private double salary;
     private LocalDate hireDay;
     // constructor
@@ -31,7 +31,13 @@ public class Employee {
     {
         return hireDay;
     }
-
+    
+    private boolean equals(Employee other)
+    {
+    return name.equals(other.name);
+    }
+    
+    
     
 
 }
