@@ -9,6 +9,17 @@ public class classclass{
         Employee e = staff[1];
         System.out.println(e.getClass().getName() + " " + e.getName());  
      
+    
+        try
+        {
+        String name = "test"; // get class name
+        Class cl = Class.forName(name); // might throw exception
+        // do something with cl
+        }
+        catch (Exception a)
+        {
+        a.printStackTrace();
+        }
   }
 
 }
